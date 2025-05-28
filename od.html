@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>オーダーAPP</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #fff;
+      color: #111;
+    }
+    header {
+      background-color: #f8f8f8;
+      padding: 10px;
+      text-align: center;
+      position: relative;
+    }
+    .cart-icon {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 24px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    .menu-categories {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: #eee;
+      padding: 10px;
+    }
+    .menu-categories button {
+      background: #ddd;
+      border: none;
+      color: #111;
+      padding: 10px 15px;
+      border-radius: 5px;
+      margin: 5px;
+    }
+    .menu-item {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+      padding: 10px;
+    }
+    .menu-item img {
+      width: 60px;
+      height: 60px;
+      border-radius: 8px;
+      margin-right: 10px;
+    }
+    .menu-item button {
+      margin-left: auto;
+      background-color: #555;
+      color: #fff;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+    }
+    .actions {
+      display: flex;
+      justify-content: space-around;
+      background-color: #f0f0f0;
+      padding: 10px;
+    }
+    .actions button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+    }
+    .player {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #222;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 10px;
+      border-top: 1px solid #444;
+      z-index: 10;
+    }
+    .player img {
+      height: 40px;
+      width: 40px;
+      border-radius: 4px;
+    }
+    main {
+      padding-bottom: 150px; /* プレイヤーの高さ + 余白 */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>オーダーAPP</h1>
+    <button class="cart-icon" onclick="alert('カート画面へ移動')">🛒</button>
+  </header>
+
+  <div class="menu-categories">
+    <button>モーニング</button>
+    <button>ランチ</button>
+    <button>ディナー</button>
+    <button>ドリンク</button>
+    <button>スイーツ</button>
+    <button>サイド</button>
+  </div>
+
+  <main>
+    <div class="menu-item">
+      <img src="./imgfile/food_breakfast.png" alt="モーニングセット" />
+      <div>
+        <h4>モーニングセット</h4>
+        <p>¥500</p>
+      </div>
+      <button>カートに追加</button>
+    </div>
+    <div class="menu-item">
+      <img src="./imgfile/cafe_morning_coffee_set.png" alt="トースト＆コーヒー" />
+      <div>
+        <h4>トースト＆コーヒー</h4>
+        <p>¥450</p>
+      </div>
+      <button>カートに追加</button>
+    </div>
+    <div class="menu-item">
+      <img src="./imgfile/food_yaki_curry.png" alt="カレーランチ" />
+      <div>
+        <h4>カレーランチ</h4>
+        <p>¥850</p>
+      </div>
+      <button>カートに追加</button>
+    </div>
+    <div class="menu-item">
+      <img src="./imgfile/drink_banana_juice.png" alt="フルーツジュース" />
+      <div>
+        <h4>フルーツジュース</h4>
+        <p>¥400</p>
+      </div>
+      <button>カートに追加</button>
+    </div>
+  </main>
+
+  <div class="actions">
+    <button onclick="alert('注文確認へ')">注文確認へ</button>
+    <button onclick="location.href='artist.html'">アーティスト詳細</button>
+  </div>
+
+  <div class="player">
+    <img src="./imgfile/images.jpg" alt="ジャケット画像" onclick="location.href='od2.html'"/>
+    <div>
+      <p>Now Playing: Sample Song - Artist Name</p>
+    </div>
+    <button>▶︎</button>
+  </div>
+</body>
+</html>
